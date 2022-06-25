@@ -31,6 +31,15 @@
 */
 
 //CODE HERE
+let pizza = {
+    name: 'cheese pizza',
+    price: 12,
+    category: 'entree',
+    popularity: 7,
+    rating: 4,
+    tags: ['gluten-free', 'kids']
+}
+//console.log(pizza)
 
 
 
@@ -43,6 +52,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity)
 
 
 /*
@@ -53,6 +63,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,6 +74,8 @@
 */
 
 //CODE HERE
+let {price} = pizza
+console.log(price)
 
 
 /*
@@ -73,6 +86,8 @@
 */
 
 //CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +103,49 @@
 */
 
 //CODE HERE
+let foodArr = [
+    {
+        name: 'hot dog',
+        price: 11,
+        category: 'entree',
+        popularity: 8,
+        rating: 4.5,
+        tags: ['good for ya', 'dogs']
+    },
+    {
+        name: 'meat lovers pizza',
+        price: 15,
+        category: 'entree',
+        popularity: 10,
+        rating: 5,
+        tags: ['non-vegan', 'apex-predators']
+    },
+    {
+        name: 'ham and cheese',
+        price: 13,
+        category: 'entree',
+        popularity: 9,
+        rating: 3.5,
+        tags: ['non-kosher', 'diabetes-friendly']
+    },
+    {
+        name: 'turkey and cheese',
+        price: 10,
+        category: 'entree',
+        popularity: 6,
+        rating: 3,
+        tags: ['gluten-free', 'thanksgiving friendly']
+    },
+    {
+        name: 'one pickle',
+        price: 2,
+        category: 'appetizer',
+        popularity: 4,
+        rating: 2,
+        tags: ['exact replica of  fictional scientist', 'pickle rick!!!']
+    }
+]
+//console.log(foodArr)
 
 
 
@@ -105,7 +163,8 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+ const filteredFood = foodArr.filter((element,i) => element.tags[i] === 'non-vegan')
+ console.log(filteredFood)
 
 
 
