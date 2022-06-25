@@ -163,7 +163,7 @@ let foodArr = [
 
 //CODE HERE
 
- const filteredFood = foodArr.filter((element,i) => element.tags[i] === 'non-vegan')
+ const filteredFood = foodArr.filter((element,i) => element.tags[i] === 'apex-predators'||element.tags[0] === 'apex-predators')
  console.log(filteredFood)
 
 
