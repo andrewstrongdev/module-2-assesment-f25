@@ -35,7 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+
+const summedPrice = cart.reduce((acc, curr) => acc + curr.price, cart[0].price - cart[0].price)
+console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,6 +56,11 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = function(carTotal,couponValue, tax){
+  
+    return((carTotal * (1 + tax)) - couponValue)
+}
+console.log(calcFinalPrice(1000,100,.10))
 
 
 
@@ -80,6 +87,12 @@ const cart = [
 /*
     TEXT ANSWER HERE
 
+properties 
+- name (so the restaurant can recognize the name for a takeout order or a reservation)- type string( names are strings)
+- phoneNumber (so the restaurant can recognize the phone number for a takeout order or a reservation)- type string (we dont need to do math on phone numbers)
+- email (so the restaurant can spam the customer with emails to hope to lure them in)- type string(emails are strings)
+- party number (so a restaurant can reserve a sufficiently large table)- type number (party number is a number)
+
 */
 
 /*
@@ -88,3 +101,9 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: "Andres Fuertes",
+    phoneNumber: "801-big-dawg",
+    email: "Spamarama@spamMail.com",
+    partyNumber: (1)//so lonely
+}
