@@ -134,7 +134,7 @@ let foodArr = [
         category: 'entree',
         popularity: 6,
         rating: 3,
-        tags: ['gluten-free', 'thanksgiving friendly']
+        tags: ['non-vegan', 'thanksgiving friendly']
     },
     {
         name: 'one pickle',
@@ -163,8 +163,12 @@ let foodArr = [
 
 //CODE HERE
 
- const filteredFood = foodArr.filter((element,i) => element.tags[i] === 'apex-predators'||element.tags[0] === 'apex-predators')
- console.log(filteredFood)
+
+const filteredFood = (string) => {
+  return  foodArr.filter((element,i) => element.tags[i] === string|| element.tags[0] === string)
+}
+
+ //console.log(filteredFood('non-vegan'))
 
 
 
@@ -209,6 +213,24 @@ let foodArr = [
 
 //CODE HERE
 
+ //filter greater than or filter less than
+ 
+
+const filterByProperty = (property, number, type) => {
+
+   let filterArr = [];
+
+        if (type === 'above'){
+           filterArr = foodArr.filter(element => element[property] > number)
+        } else {
+            filterArr = foodArr.filter(element => element[property] < number)
+        }
+        return filterArr
+}
+
+
+
+
 
 /*
     Invoke the `filterByProperty` function passing
@@ -218,3 +240,4 @@ let foodArr = [
 */
 
 //CODE HERE
+console.log(filterByProperty('popularity',6,'above'))
